@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudaí</title>
+    <link rel="shortcut icon" href="C:\Users\Ednaldo Miranda\Downloads\planejamento - agenda escolar\istockphoto-1172489050-612x612.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="C:\Users\Ednaldo Miranda\Downloads\planejamento - agenda escolar\main.css">
+</head>
+<body>
+  <main>
+    <header>
+        <h1>Bem vindo ao Estudaí!</h1>
+        <div class="botoes_P">
+          <button>Cadastrar atividades</button>
+          <button>Minhas atividades</button>
+          <button onclick="mostrarInput()">Adicionar nota</button>
+          <button onclick="window.location.href='cadastro.html'">Cadastrar-se</button>
+        </div>
+    </header>
+    <div class="introducao">
+      <div class="texto-introducao">
+        <h3>Muitos estudantes enfrentam dificuldades para lembrar prazos de provas, trabalhos e atividades, por falta de uma ferramenta simples e adaptada à rotina escolar.</h3>
+        <h3>A aplicação organiza todas as atividades escolares, envia notificações e ajuda o aluno a manter o foco sem depender de agendas tradicionais.</h3>
+      </div>
+      <div class="bloco-postit">
+        <div class="postit">
+          <p id="conteudoPostit">Não esquecer a prova de matemática!</p>
+        </div>
+        <div id="area-input" style="display: none; margin-top: 10px;">
+          <input type="text" id="notaInput" placeholder="Digite sua nova nota">
+          <button id="salve" onclick="adicionarNota()">Salvar</button>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <p id="cont_imp">Seu praso para entregar a tarefa de física acaba às 23:59!</p>
+    </div>
+  <script>
+    function mostrarTexto() {
+      const input = document.getElementById("meuInput").value;
+      document.getElementById("resultado").textContent = input;
+    }
+  </script>
+  <script>
+    function alternarTexto() {
+      const botao = document.getElementById("meuBotao");
+
+      if (botao.textContent === "Mostrar") {
+        botao.textContent = "Ocultar";
+      } else {
+        botao.textContent = "Mostrar";
+      }
+    }
+    function mostrarInput() {
+    document.getElementById("area-input").style.display = "block";
+  }
+
+  function adicionarNota() {
+    const nota = document.getElementById("notaInput").value;
+    document.getElementById("conteudoPostit").textContent = nota;
+    document.getElementById("area-input").style.display = "none";
+  }
+  </script>
+  </main>
+  <footer>
+  © 2025 Estudaí. Todos os direitos reservados. <br>
+  Projeto desenvolvido por Matheus Henrique e Rômulo Siqueira – Trabalho escolar. <br>
+  Versão Beta – Página em desenvolvimento. <br>
+  Contatos mham4@discente.ifpe.edu.br
+</footer>
+
+</body>
+</html>

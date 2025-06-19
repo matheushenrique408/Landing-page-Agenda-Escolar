@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(181, 234, 255);
+}
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('TheStudentsTeacher-Regular.ttf') format('truetype');
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+header{
+    display: flex;
+    background-color: rgb(111, 157, 218);
+    color: aliceblue;
+    justify-content: space-between;
+    padding-right: 1rem;
+    font-family: 'MinhaFonte', sans-serif;
+     
+}
+h1{
+    background-color: rgb(111, 157, 218);
+    font-size: 75px;
+    margin-left: 20px;
+}
+.botoes_P{
+    display: flex;
+    background-color: rgb(111, 157, 218);
+}
+.botoes_P button{
+    margin-left: 20px;
+    background-color: rgb(111, 157, 218);
+    color: aliceblue;
+    border: none;
+    font-size: 18px;
+    
+}
+.botoes_P button:hover{
+    color: rgb(144, 255, 227);
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: rgb(216, 223, 228);
+    font-family: 'MinhaFonte', sans-serif;
+}
+.introducao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'MinhaFonte', sans-serif;
+  color: rgb(75, 83, 90);
+}
+
+.texto-introducao {
+  max-width: 60%;
+  font-size: 20px;
+}
+
+.texto-introducao h3 {
+  margin-bottom: 10px;
+}
+.postit {
+  background-image: url('32699ae99b8d9df0fb3ba85ea9fd3717-removebg-preview.png'); /* caminho relativo da imagem */
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-family: 'MinhaFonte', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-left: 45px;
+}
+.postit p{
+  background-color: transparent;
+}
+input{
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 2px dashed black
+}
+#salve{
+  border: 1px solid rgb(171, 248, 216);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 18px;
+  background-color: rgb(107, 247, 247);
+  font-family: 'MinhaFonte', sans-serif;
+  transition: 0.3s;
+}
+#salve:hover{
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+  animation: pulsar 0.8s infinite;
+}
+@keyframes pulsar{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.bloco-postit {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+}
+#notaInput, #salve{
+  margin-left: 50px;
+}
+/*.post{
+  background-image: url('images-removebg-preview.png'); /* caminho relativo da imagem */
+  /*background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-family: 'MinhaFonte', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-left: 45px;
+  flex-wrap: wrap;
+}*/
+.post {
+  background-image: url('images-removebg-preview.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'MinhaFonte', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-left: 45px;
+  box-sizing: border-box;
+
+  display: block; /* <- troque flex por block */
+  overflow: hidden;
+}
+/*.post p {
+  font-size: 14px;
+  overflow-y: auto;
+}*/
+.post p {
+  max-width: 100%;
+  max-height: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow-y: auto; /* adiciona rolagem se necessário */
+  background-color: transparent;
+  margin-top: 100px;
+}
